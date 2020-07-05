@@ -1,6 +1,8 @@
 package com.guilherme.comexporttest.controller;
 
+import com.guilherme.comexporttest.models.Contact;
 import com.guilherme.comexporttest.models.User;
+import com.guilherme.comexporttest.services.ContactService;
 import com.guilherme.comexporttest.services.UserService;
 import com.guilherme.comexporttest.util.URL;
 
@@ -20,6 +22,10 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ContactService contactService;
+
     @GetMapping
     public List<User> getAll() {
         return userService.findAll();
@@ -33,6 +39,7 @@ public class UserController {
 
     @PostMapping
     public void userInsert(@Valid @RequestBody User user) {
+
         userService.save(user);
     }
 
