@@ -16,12 +16,12 @@
 
 1. GET - `http://localhost:8080/users/`
 2. GET by ID - `http://localhost:8080/users/{id}`
-3. GET by TIPO - `http://localhost:8080/users/email?email{=email}`
-4. GET by NOME - `http://localhost:8080/users/name?text={name}`
+3. GET by EMAIL - `http://localhost:8080/users/email?email{=email}`
+4. GET by NAME - `http://localhost:8080/users/name?text={name}`
 5. POST - `http://localhost:8080/users/`
 - faça post utilizando JSON:
     {
-        
+    
         "name": "teste",
         "email": "test@teeest.com",
         "birthDate": "1998-06-26",
@@ -30,3 +30,15 @@
     }
     
 6. DELETE - `http://localhost:8080/users/1`
+7. PUT - `http://localhost:8080/users`
+- faça post utilizando JSON:
+    {
+    
+        "id": 1
+        "name": "teste",
+        "email": "test@teeest.com",
+        "birthDate": "1998-06-26",
+        "address": "rua 12"
+        
+    }
+    
